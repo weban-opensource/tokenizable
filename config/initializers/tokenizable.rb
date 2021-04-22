@@ -1,0 +1,1 @@
+Tokenizable.token_salt = 'set-some-value'
