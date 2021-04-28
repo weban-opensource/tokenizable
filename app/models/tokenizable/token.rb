@@ -1,5 +1,4 @@
 require 'jwt'
-require 'attr_encrypted'
 
 module Tokenizable
   class Token < ApplicationRecord
