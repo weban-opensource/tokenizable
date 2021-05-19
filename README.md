@@ -5,6 +5,12 @@ Short description and motivation.
 ```ruby
 class User < ApplicationRecord
   tokenizable
+
+  # Optional
+  def after_token_create; end
+
+  # Optional
+  def after_token_destroy; end
 end
 ```
 

@@ -7,9 +7,15 @@ module Tokenizable
         class_eval do
           has_many :tokens, class_name: 'Tokenizable::Token', as: :ownerable
 
+          after_create :after_token_create
+          after_destroy :after_token_destroy
+
           def summary_tokens_use
             tokens.sum(:used)
           end
+
+          def after_token_create; end
+          def after_token_destroy; end
         end
 
         extend ::Tokenizable::Extenders::ClassMethods
